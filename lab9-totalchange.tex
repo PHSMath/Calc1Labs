@@ -1,0 +1,70 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{fancyhdr}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[hmargin=2cm,vmargin=2.5cm]{geometry}
+\usepackage[normalem]{ulem}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+
+
+\pagestyle{fancy}
+\setlength\parindent{0in}
+\setlength\parskip{0.1in}
+\setlength\headheight{15pt}
+
+
+\begin{document}
+
+\begin{flushright}
+	\begin{Large}
+		Lab 9: Finding accumulated change 
+	\end{Large}
+\end{flushright}
+
+
+
+\subsection*{Introduction and instructions} 
+
+This lab focuses on a key application of integration and the Fundamental Theorem of Calculus, specifically finding the total change accumulated by a changing quantity over a period of time.  
+
+\noindent
+\textbf{Before starting:} Review Section 4.4.3 in the textbook, on ``The Total Change Theorem'' and study example 4.4.7 (the solution is available in the online version of the book: \url{https://activecalculus.org/single/sec-4-4-FTC.html}). 
+
+
+\noindent
+\textbf{Formatting and turning in your work:} Submit your solution in a typed-up format at the assignment dropbox where you found this lab handout. No handwritten work, including photos or scans of handwritten work embedded as images, will be accepted. 
+
+\noindent
+\textbf{Grading:} A Satisfactory mark will be given for work that is
+complete (no important work is omitted), correct (not just the answer but also the work leading to the answer and any explanations given), and clear (the work has an appropriate mix of English and math -- it is not all calculations, and not all words, but a mixture of both that makes the solution easy to follow for an average calculus student). Remember that work that is significantly incomplete may be marked Incomplete and given no opportunity to revise. 
+
+
+\subsection*{Main Activity}
+
+
+When an aircraft attempts to climb as rapidly as possible, its climb rate (in feet per minute) decreases as altitude increases, because the air is less dense at higher altitudes. Given below is a table showing performance data for a certain single engine aircraft, giving its climb rate at various altitudes, where $c(h)$ denotes the climb rate of the airplane at an altitude $h$.
+
+\begin{center}
+	\begin{tabular}{c||c|c|c|c|c|c|c|c|c|c|c}
+	$h$ (feet) & 0 & 1000 & 2000 & 3000 & 4000 & 5000 & 6000 & 7000 & 8000 & 9000 & 10000 \\ \hline
+	$c(h)$ (ft/min) & 925 & 875 & 830 & 780 & 730 & 685 & 635 & 585 & 535 & 490 & 440 
+	\end{tabular}
+\end{center}
+
+	\begin{enumerate}
+	    \item Let $m(h)$ be the function that measures the number of  minutes required for a plane at altitude $h$ to climb to the next foot of altitude. What are the units of $m(h)$, and how is $m(h)$ related to $c(h)$ mathematically? 
+		\item Construct a table similar to the one above for the values of $m(h)$.
+		\item Write a definite integral whose value tells us exactly the number of minutes required for the airplane to ascend to 10,000 feet of altitude. Clearly explain why the value of this integral has the required meaning.
+		\item Compute a Riemann sum with $n = 10$ that will give a lower estimate (underestimate) for the integral set up in part (c). State which Riemann sum you are using (left, right, middle) and why you know this sum will be an underestimate.
+		\item Compute a Riemann sum with $n = 10$ that will give an upper  estimate (overestimate) for the integral set up in part (c). State which Riemann sum you are using (left, right, middle) and why you know this sum will be an overestimate.
+	\end{enumerate}
+
+
+
+\end{document}

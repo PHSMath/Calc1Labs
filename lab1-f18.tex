@@ -1,0 +1,96 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{fancyhdr}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[hmargin=2cm,vmargin=2.5cm]{geometry}
+\usepackage[normalem]{ulem}
+\usepackage{enumerate}
+\usepackage{hyperref}
+
+\newcommand{\workingDate}{\textsc{10/13 Oct 2014}}
+\newcommand{\courseName}{MTH 201}
+\newcommand{\institution}{Grand Valley State University}
+
+\pagestyle{fancy}
+\setlength\parindent{0in}
+\setlength\parskip{0.1in}
+\setlength\headheight{15pt}
+
+%%%%%%%%%%% HEADER / FOOTER %%%%%%%%%%%
+\rhead{\workingDate}
+\chead{\textsc{Lab 6}}
+\lhead{\textsc{\courseName}}
+\rfoot{\textsc{\thepage}}
+\cfoot{\textit{Built: \today}}
+\lfoot{\textsc{\institution}}
+
+\begin{document}
+
+\begin{flushright}
+	\begin{Large}
+		Lab 5: Models of infant growth
+	\end{Large}
+\end{flushright}
+
+\subsection*{Instructions} 
+
+This Lab, like Lab 5, should be written up using the modified Lab Writeup Guidelines that were posted a few days ago. Before you begin work, review these guidelines carefully to avoid receiving a ``0'' grade on this assignment because you did not understand one of the guidelines. In particular, remember that 
+
+\begin{itemize}
+	\item You are to work in groups of 2 or 3. 
+	\item Your work must be typewritten; no handwritten work will be accepted. 
+	\item Your work must be saved and submitted as a PDF file; no other file formats will be accepted. 
+	\item The file containing your work must be titled according to the format spelled out in the guidelines. 
+\end{itemize}
+
+
+\subsection*{Setup for this lab}
+
+On the course website where the Lab is posted, you will find another PDF file that contains a chart from the US Center for Disease Control. The chart shows the growth curves for length and weight of boys born in the US, from birth to age 36 months. This is one chart that contains two groups of curves, and in each group there are seven individual curves. Here is how to read these graphs: 
+
+\begin{itemize}
+	\item The upper set of curves describes the length (height) of boys as they grow. The lower set of curves describes weight. 
+	\item Within each set, there are seven curves depending on \emph{percentile}. For example, the lowest curve in each set shows the progression of boys who are in the 5th percentile -- that is, boys for whom 95\% of the population are heavier or longer than they are. The curve in the middle shows the progression of boys who are in the 50th percentile -- boys who are in the exact middle of the population in terms of weight or length. 
+	\item Finally, note that along the bottom of the chart is a time scale, in months starting from birth up to 36 months. along the left and right sides are weight in pounds and kilograms, and length in inches and centimeters. 
+\end{itemize}
+
+Before beginning the lab problem, you need to do some data collecting using these graphs. Please follow the instructions below. 
+
+\begin{enumerate}
+	\item In your group, decide whether you would like to study weight, or whether you'd like to study length. 
+	\item For the critierion you chose (length or weight), find the curve that represents the 50th percentile. 
+	\item Open up Geogebra and open up the Geogebra spreadsheet. 
+	\item In the first column of the spreadsheet, enter time in months, in increments of three months, starting with birth (0 months) and ending at 3 years of age (36 months). 
+	\item In the second column, enter in the value of the criterion you chose (length or weight) at each month value (0, 3, 6, .., 36 months). \textbf{You will need to estimate these off of the CDC charts.} Use the PDF of the charts to zoom in on the charts to get an accurate reading. You may choose either unit of measurement, but make a note of which one you choose. 
+	\item You will now have two columns of data: One for age (let's call that $x$, in months) and another for length or height (let's call that $y$). Using the mouse, highlight all the data in your spreadsheet and then click the \emph{second button from the left, for Two-Variable Regression Analysis}. The button looks like this: 
+	\begin{center}
+		\includegraphics[width=1.5in]{2vra}
+	\end{center}
+	This will bring up a small window; click \texttt{Analyze} within that window. 
+	\item You should now see a picture that shows your data points plotted as points, and there is a pulldown menu for \texttt{Regression model}. Under that pulldown menu are several options for function types, including Linear, Log, Polynomial, and Power. Select one of those. Geogebra will put a function of that type through your data plot that is the ``best fit'' for the data and also produce its formula. 
+\end{enumerate}
+
+Keep this window open during your Lab, since you are going to be exploring several different models for the child growth data. 
+
+
+\subsection*{Main Activities}
+
+\begin{enumerate}
+	\item Using Geogebra, generate the formulas for the Linear, Log, Polynomial, and Power regression models for your data and then write these formulas down in your writeup. 
+
+	\item Use each of the four models you generated to predict the height or length of a boy in the 50th percentile, at age 4 years. Show your work (it's not much). 
+
+	\item Write a paragraph (two, if you need) that compares each of the four models in terms of how well they fit the data plot and how good of a job they will do in making long-term predictions about your data. 
+
+	\item Focus in on the logarithmic model you generated. By hand, calculate its first and second derivatives and show your work in the writeup. Then, based on the outcome of the derivatives, discuss the increasing/decreasing behavior of that model and the concavity of that model. (Will the model ever decrease? Will the model ever go completely horizontal? Will the model always have the same concavity, or will the concavity change at some point?) 
+
+	\item Make a table of values for the \emph{derivative} of the logarithmic model. (There is more than one correct way to do this. Pick an approach that is mathematically valid and go with it. If you do all your work in a spreadsheet, give a brief explanation of what you did in the spreadsheet to calculate the values.) Give a short summary of the behavior of the derivative over time, based on the table values. 
+
+\end{enumerate}
+
+	
+\end{document}
